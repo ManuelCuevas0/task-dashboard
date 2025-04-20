@@ -26,4 +26,4 @@ Task Dashboard es una aplicación diseñada para la gestión de tareas y la visu
 
 1. Clona este repositorio:
    ```bash
-   git clone https://github.com/tu-usuario/task-dashboard.git
+   git clone https://github.com/manuelcuevas0/task-dashboard.git
