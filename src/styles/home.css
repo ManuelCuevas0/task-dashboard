@@ -1,0 +1,206 @@
+/* home.css */
+
+/* --- Estilos Generales --- */
+.home-container {
+    padding: 2rem;
+    max-width: 1000px; /* Máxima anchura del contenedor */
+    margin: auto;
+    color: #1a2b47;
+    transition: margin-left 0.3s ease; /* Transición suave */
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 300px;
+  }
+  
+  /* --- Encabezado --- */
+  .home-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #1a2b47;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .home-header .logo h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .home-header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .home-header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .home-header nav a:hover {
+    text-decoration: underline;
+  }
+  
+  /* --- Sección Principal (Hero Section) --- */
+  .hero-section {
+    text-align: center;
+    background-image: url("https://media.giphy.com/media/qbnwYvaSHUTdRouNwZ/giphy.gif");
+    background-size: cover;
+    background-position: center;
+    color: rgb(19, 16, 16);
+    padding: 80px 20px;
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+  
+  
+  .hero-section h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .hero-section p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .hero-section .cta-button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #072c53;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .hero-section .cta-button:hover {
+    background-color: #003f88;
+  }
+  
+  /* --- Características --- */
+  .features-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #e6e6e6;
+  }
+  
+  .features-section h3 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #072547;
+    
+  }
+  
+  .feature-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+  }
+  
+  .feature-card {
+    background-color: rgb(190, 188, 188);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 30%;
+  }
+  
+  .feature-card h4 {
+    font-size: 1.5rem;
+    color: #072547;
+    margin-bottom: 10px;
+  }
+  
+  .feature-card p {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  .feature-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* --- Testimonios --- */
+  .testimonials-section {
+    padding: 60px 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+  }
+  
+  .testimonials-section h3 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #081d36;
+    font-weight: bold;
+  }
+  
+  .testimonials {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    font-style: italic;
+    font-weight: bold;
+  }
+  
+  blockquote {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+  }
+  
+  blockquote footer {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #2c68b1;
+    font-weight: bold;
+  }
+  
+  /* --- Footer --- */
+  .footer {
+    background-color: #1a2b47;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.2rem;
+  }
+  
+  .social-links a:hover {
+    color: #2a5866;
+  }
+  
+  /* --- Responsividad --- */
+  @media (max-width: 768px) {
+    .home-header nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .feature-cards {
+      flex-direction: column;
+    }
+  
+    .testimonials {
+      flex-direction: column;
+    }
+  
+    .footer {
+      text-align: center;
+    }
+  }
+  

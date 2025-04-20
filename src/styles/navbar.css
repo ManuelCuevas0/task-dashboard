@@ -1,0 +1,169 @@
+/* General styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Barra lateral */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  background-color: #1a2b47; /* Azul oscuro */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  z-index: 1000;
+  transition: width 0.3s ease;
+}
+
+.sidebar.collapsed {
+  width: 80px;
+}
+
+/* Header con logo y nombre */
+.sidebar-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.sidebar-logo iframe {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  transition: width 0.3s, height 0.3s;
+}
+
+.sidebar.collapsed .sidebar-logo iframe {
+  width: 40px;
+  height: 40px;
+}
+
+.site-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  margin-top: 10px;
+  text-align: center;
+  transition: opacity 0.3s;
+}
+
+.sidebar.collapsed .site-name {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+/* Ítems del menú */
+.menu-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 20px;
+}
+
+.sidebar.collapsed .menu-items {
+  padding-left: 0;
+  align-items: center;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 15px;
+  transition: background 0.3s, padding 0.3s;
+}
+.menu-item:hover {
+  background-color: #263c64;
+
+}
+
+.sidebar.collapsed .menu-item {
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.menu-text {
+  margin-left: 10px;
+  transition: opacity 0.3s, margin-left 0.3s;
+}
+
+.sidebar.collapsed .menu-text {
+  opacity: 0;
+  margin-left: 0;
+  display: none;
+}
+
+/* Footer */
+.footer {
+  margin-top: auto;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #bbb;
+  transition: opacity 0.3s;
+}
+
+.sidebar.collapsed .footer {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+/* Botón de colapsar */
+.toggle-sidebar-btn {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 230px;
+  z-index: 1100;
+  background-color: #1a2b47;
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: left 0.3s ease;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.toggle-sidebar-btn:hover {
+  background-color: #263c64;
+}
+
+.toggle-sidebar-btn.collapsed {
+  left: 50px;
+}
+
+.toggle-btn:focus {
+  outline: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .sidebar.collapsed {
+    width: 60px;
+  }
+
+  .toggle-sidebar-btn {
+    left: 200px;
+  }
+
+  .toggle-sidebar-btn.collapsed {
+    left: 60px;
+  }
+}
